@@ -1,10 +1,11 @@
 using System;
-using Unity.Services.Lobbies.Models;
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
+//This script will take input of start scene
+//Will disable floating text (Click anywhere to start)
+//Will disable raycast target on background image
 public class ImageClickHandler : MonoBehaviour, IPointerClickHandler
 {
     [SerializeField] GameObject lobbyBack;
@@ -13,7 +14,6 @@ public class ImageClickHandler : MonoBehaviour, IPointerClickHandler
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        Debug.Log("Image clicked!");
         DisableText();
         DisableRaycastOnImage();
         userName = Resources.Load<UserName>("UserName");

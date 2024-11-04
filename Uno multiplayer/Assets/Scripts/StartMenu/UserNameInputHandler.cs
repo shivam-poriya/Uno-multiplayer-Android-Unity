@@ -1,6 +1,6 @@
 using UnityEngine;
 using TMPro;
-
+//This script is used to Input userName for player
 public class UserNameInputHandler : MonoBehaviour
 {
     private TMP_InputField userNameInputField;
@@ -13,12 +13,19 @@ public class UserNameInputHandler : MonoBehaviour
         userName = Resources.Load<UserName>("UserName");
         userNameInputField = GetComponent<TMP_InputField>();
         userName.Name = userNameInputField.text;
-        Debug.Log("User Name saved: " + userName.Name);
     }
 
     public void onDone()
     {
-        InputFieldUI.SetActive(false);
-        lobbyBack.SetActive(true);
+        userName = Resources.Load<UserName>("UserName");
+        if (!userName.Name.Equals(""))
+        {
+            InputFieldUI.SetActive(false);
+            lobbyBack.SetActive(true);
+        }
     }
+
+
 }
+
+

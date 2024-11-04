@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 683f95902ae60f44bbd4f0b0800f7df4, type: 3}
   m_Name: UserName
   m_EditorClassIdentifier: 
-  Name: Hello world
+  Name: 
